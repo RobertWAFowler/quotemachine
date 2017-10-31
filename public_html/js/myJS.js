@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var myQuotes = $.getJSON('../data/myQuotes.json'); 
-        //[{"quote": "This is a quote", "author": "Joe Blogs"},
-    //{"quote": "adgfgsdf", "author": "srgwegwt"},
-    //{"quote": "dsfgsdfg", "author": "btrtwb"},
-    //{"quote": "sdfgsdf", "author": "btrwtw"},
-    //{"quote": "gfdgsdf", "author": "btrwb"},
-    //{"quote": "dfsgsfdg", "author": "trbwt"}];
+var myQuotes = [{"quote": "This is a quote", "author": "Joe Blogs"},
+    {"quote": "adgfgsdf", "author": "srgwegwt"},
+    {"quote": "dsfgsdfg", "author": "btrtwb"},
+    {"quote": "sdfgsdf", "author": "btrwtw"},
+    {"quote": "gfdgsdf", "author": "btrwb"},
+    {"quote": "dfsgsfdg", "author": "trbwt"}];
 
 
 
 function getRandomQuote() {
-    var item = myQuotes[Math.floor(Math.random()*myQuotes.length)];
-    return item;              
+    var quote = myQuotes[Math.floor(Math.random()*myQuotes.length)];
+    document.getElementById("myQuote").innerHTML = quote.quote;
+    document.getElementById("myAuthor").innerHTML = quote.author;
+    return quote;              
 }
