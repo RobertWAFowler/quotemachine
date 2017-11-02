@@ -26,31 +26,45 @@ and open the template in the editor.
 
                 <div class="cover-container">
 
-                    <header class="masthead clearfix">
+                    <header class="masthead clearfix float-center">
                         <div class="inner">
-                            <h3 class="masthead-brand">Rob's sage quotes</h3>
-                            <nav class="nav nav-masthead">
+                            <h3 class="masthead-brand">Rob's Quote Generator</h3>
+<!--                            <nav class="nav nav-masthead">
                                 <a class="nav-link active" href="#">Home</a>
                                 <a class="nav-link" href="#">Features</a>
                                 <a class="nav-link" href="#">Contact</a>
-                            </nav>
+                            </nav>-->
                         </div>
                     </header>
 
                     <main role="main" class="inner cover">
-                        <h1 class="cover-heading">Random quote machine</h1>
+                        <hr/>
                         <div class="lead">
-                            Quote: <div id="myQuote"></div>
-                        Author: <div id="myAuthor"></div>
-                        <script>
-                            var quote = getRandomQuote();
-                        </script>
+                            <blockquote class="blockquote">
+                                <p class="mb-0" id="myQuote"></p>
+                                <footer class="blockquote-footer"><cite id="myAuthor" title="Source Title"></cite></footer>
+                            </blockquote>
+
+                            <script>
+                                var quote = getRandomQuote();
+                            </script>
+                        </div>
+
+                        <hr/>
+                        <div id="container">
+
+                            <button type="button" class="btn float-center" onclick="getRandomQuote()"><i class="fa fa-refresh fa-spin"></i> Get quote!</button>
+                            <a class="btn btn-social-icon btn-twitter" onclick="tweetQuote()" id="btnTweet">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                            
+                              
                         </div>
                     </main>
 
                     <footer class="mastfoot">
                         <div class="inner">
-                            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                            <p>A freecodecamp project by <a href="https://zenhog.com/">zenhog</a>, <a href="https://twitter.com/RobWAFowler">@RobWAFowler</a>.</p>
                         </div>
                     </footer>
 
